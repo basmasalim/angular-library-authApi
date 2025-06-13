@@ -1,0 +1,134 @@
+
+  .login-container {
+    position: relative;
+    width: 22.2rem;
+  
+    .form-container {
+      border: 1px solid hsla(0, 0%, 65%, 0.158);
+      box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+      z-index: 99;
+      padding: 2rem;
+  
+      .illustration {
+        position: absolute;
+        top: -14%;
+        right: -2px;
+        width: 90%;
+      }
+  
+      h1 {
+        &.opacity {
+          opacity: 0.6;
+        }
+      }
+  
+      form {
+        input {
+          display: block;
+          width: 100%;
+          padding: 14.5px;
+          margin: 2rem 0;
+          background-color: #9191911f;
+          color: var(--color);
+          font-size: 15px;
+          font-weight: 500;
+          border: none;
+          border-radius: 5px;
+          outline: none;
+          backdrop-filter: blur(15px);
+          letter-spacing: 0.8px;
+  
+          &:focus {
+            box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+            animation: wobble 0.3s ease-in;
+          }
+        }
+  
+        button {
+          background-color: var(--primary-color);
+          color: var(--color);
+          padding: 13px;
+          width: 100%;
+          margin-bottom: 2rem;
+          border: none;
+          border-radius: 5px;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 1.5px;
+          cursor: pointer;
+          transition: all 0.1s ease-in-out;
+  
+          &:hover {
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02);
+          }
+        }
+      }
+  
+      .register-forget {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: space-between;
+  
+        a {
+          opacity: 0.6;
+        }
+      }
+    }
+  
+    .circle {
+      width: 8rem;
+      height: 8rem;
+      background: var(--primary-color);
+      border-radius: 50%;
+      position: absolute;
+  
+      &.circle-one {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transform: translate(-45%, -45%);
+      }
+  
+      &.circle-two {
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        transform: translate(45%, 45%);
+      }
+    }
+  }
+  
+  .theme-btn-container {
+    position: absolute;
+    left: 0;
+    bottom: 2rem;
+  
+    .theme-btn {
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+  
+      &:hover {
+        width: 40px !important;
+      }
+    }
+  }
+  
+  // Animation
+  @keyframes wobble {
+    0% {
+      transform: scale(1.025);
+    }
+    25% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.025);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
